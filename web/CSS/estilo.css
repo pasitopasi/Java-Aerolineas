@@ -1,0 +1,645 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05-ene-2017, 21:45:53
+    Author     : pasito
+*/
+*{
+    font-family: 'arial';
+}
+input, select{
+    padding: 5px;
+}
+#titulo{
+    margin-left: 20%;
+}
+body, html{
+    margin:0;
+}
+#menu{
+    font-weight: bold;
+    margin:0 auto;
+    background-color: #FF8000;
+}
+#prueba{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+ul {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 30px;
+}
+#menu ul li{
+    padding:10px;
+    display: inline-block;
+    margin: 0 auto;
+}
+.listaM{
+    border-left: 2px solid #FE9A2E;
+}
+ul li a{
+    color: black;
+    text-decoration: none;
+}
+ul li a:hover {
+    color: white;
+}
+#acceso{
+    border:none;
+    float:right;
+    padding-right: 15px;
+}
+
+#acceso ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+#acceso:hover > ul {
+    display:block;
+}
+#acceso ul li {
+    position:relative;
+}
+#cajon{
+    border: 1px solid black;
+    width: 200px;
+    top: 80px;
+    right: 5px;
+    background-color: #FF8000;
+    font-size: 15px;
+}
+#cajon li{
+    border:none;
+}
+#seleccion{
+    background-color: #FE9A2E;
+    border-radius: 5px;
+    width: 375px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+#seleccion1{
+    background-color: #FE9A2E;
+    border-radius: 5px;
+    width: 375px;
+    height: 225px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+#seleccion{
+    background-color: #FE9A2E;
+    border-radius: 5px;
+    width: 375px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+#seleccion h3, #seleccion h2{
+    text-align: center;
+}
+#origen{
+    padding-left: 15px;
+    width: 42%;
+    height: 120px;
+    float: left;
+}
+#destino{
+    padding-right: 15px;
+    width: 50%;
+    height: 120px;
+    float: right;
+}
+#bajo{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#continuar1{
+    margin-top: 50px;
+    margin-left: 150px;
+}
+#bajoMSG{
+    padding-top: 50px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#bajoMSG button{
+    padding: 5px;
+}
+#bajo div{
+    display: inline-block;
+}
+#pasaj1, #pasaj2, #pasaj3{
+    margin-left: 5px;
+    margin-top: 35px;
+    margin-right: 5px;
+}
+.mostrarViajes{
+    padding: 25px;
+    background-color: #FE9A2E;
+    border-radius: 5px;
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+.tablaViajes{
+    width: 100%;
+}
+.tablaViajes th, .tablaViajes td{
+    padding: 5px;
+}
+#padre{
+    margin: 0 auto;
+    height: 25px;
+}
+#contenedor{
+    padding-top: 25px;
+    margin: 0 auto;
+    width: 80%;
+    min-height: 150px;
+    min-width: 700px;
+}
+#pasajeros{
+    width: 75%;    
+    margin: 0 auto;
+    background-color: #FF8000;
+    border-radius: 5px;
+    min-height: 150px;
+}
+
+#bajo{
+    padding-bottom: 5px;
+}
+.pasaj{
+    display: none;
+    background-color: #FE9A2E;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 75%;
+    transition: height 4s;
+}
+.pasaj h2{
+    text-align: center;
+}
+.botonMostrar{
+    padding: 10px;
+    margin-left: 75px;
+    background: orange;
+    width: 175px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 1px #000;
+    display: inline-block;
+    margin-right: 80%;
+}
+#superServicios{
+    margin-top: 15px;
+    min-width: 1330px;
+}
+#servicios{
+    width: 75%;
+    min-width: 900px;
+    border-radius: 5px;
+    min-height: 550px;
+    float: left;
+    margin-bottom: 15px;
+}
+#precios{
+    width: 24%;
+    min-width: 320px;
+    border-radius: 5px;
+    min-height: 550px;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+#pasajerosS{
+    min-width: 87%;
+    margin-left: 13%;
+    border-radius: 5px;
+    min-height: 550px;
+    background-color: #FF8000;
+    margin-bottom: 15px;
+}
+#contenedorP{
+    min-width: 74%;
+    margin: 0 auto;
+    border-radius: 5px;
+    min-height: 550px;
+    border: 2px solid black;
+    margin-bottom: 15px;
+}
+#contenedorP h5{
+    margin-left: 25px;
+}
+#contenedorP p, h3{
+    margin-left: 15px;
+}
+#serviciosIDA{
+    width: 50%;
+    float: left;
+}
+#serviciosVUELTA{
+    width: 50%;
+    float: right;
+}
+.usuarioR{
+    background-color: #FE9A2E;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 750px;
+}
+.usuarioR1{
+    background-color: #FE9A2E;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 750px;
+}
+.usuarioR h3{
+    margin-left: 300px;
+}
+.usuarioR #padre{
+    width: 100%;
+    text-align: center;
+}
+#despegarB{
+    padding: 5px;
+    margin-top: 30px;
+}
+#popup {
+    display: none;
+    opacity: 0;
+    margin-top: -300px;
+}
+#popup:target {
+    display: inline;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:0;
+    z-index: 999;
+}
+#popupV {
+    display: none;
+    opacity: 0;
+    margin-top: -300px;
+}
+#popupV:target {
+    display: inline;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:0;
+    z-index: 999;
+}
+.popup-contenedor {
+    display: inline-block;
+    margin:7% 300px;
+    padding: 30px 50px;
+    background-color: #fafafa;
+    color: #333;
+    border-radius: 5px;
+    width: 50%;
+    height: 425px;
+    text-align: center;
+}
+.popup-contenedor h1{
+    text-align: left;
+}
+a.popup-cerrar {
+    position: absolute;
+    top:3px;
+    right:3px;
+    background-color: #333;
+    padding:7px 10px;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 1;
+    color:#fff;
+}
+#imagen{
+    width: 700px;
+}
+#asientoPasaj, #VasientoPasaj{
+    display: none;
+}
+#superior{
+    margin: 0 auto;
+    width: 70px;
+    height: 240px;
+    border: 1px solid black;
+    margin-bottom: 25px;
+}
+#superiorV{
+    margin: 0 auto;
+    width: 70px;
+    height: 240px;
+    border: 1px solid black;
+    margin-bottom: 25px;
+}
+.asiento{
+    width: 35px;
+    height: 50px;
+    text-align: center;
+}
+.asiento2{
+    width: 35px;
+    height: 50px;
+    text-align: center;
+}
+#primera{
+    float: left;
+}
+#segunda{
+    float: right;
+}
+#primeraV{
+    float: left;
+}
+#segundaV{
+    float: right;
+}
+.asiento:hover{
+    background-color: yellow;
+}
+.asiento2:hover{
+    background-color: yellow;
+}
+#superior p{
+    margin: 0;
+    font-size: 10px;
+}
+#superiorV p{
+    margin: 0;
+    font-size: 10px;
+}
+#RegistrarFormulario{
+    display: none;
+}
+#registrarP{
+    cursor: pointer;
+}
+#registrarP:hover{
+    color: white;
+}
+#bajoR{
+    text-align: center;
+}
+#bajoR h3{
+    text-align: left;
+}
+#tarjetasTabla{
+    width: 100%;
+}
+#tarjetasTabla td{
+    padding: 10px;
+    text-align: center;
+}
+#addTarjeta{
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 25px;
+    width: 150px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+#crearTarjeta{
+    display: none;
+    width: 100%;
+    margin-top: 25px;
+    height: 150px;
+}
+#imgTarjeta{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 20px;
+    border: 0px solid black;
+}
+#contenedorR{
+    width: 750px;
+    margin: 0 auto;
+    border-radius: 5px;
+    min-height: 25px;
+    border: 2px solid black;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+#Rida h3, #Rvuelta h3{
+    text-align: center;
+}
+#Rida{
+    padding: 5px;
+    float: left;
+    width: 365px;
+}
+#Rvuelta{
+    padding: 5px;
+    float: right;
+    width: 365px;
+}
+#contenidoT{
+    padding: 5px;
+    clear: both;
+    width: 100%;
+}
+#portada{
+    cursor: pointer;
+    position: absolute;
+    top: 27px;
+    left: 10px;
+    height: 60px;
+}
+#portada{
+    animation-duration: 3s;
+}
+@keyframes ejemplo{
+    43% {top: 500px;}
+    80% {top: 500px; left: 1100px;}
+    100%{top: 27px;left:10px;}
+}
+#texto{
+    width: 100%;
+    height: 200px;
+    text-align: justify;
+}
+#F1{
+    margin-top: 50px;
+    text-align: center;
+    height: 215px;
+}
+#F2{
+    margin-top: 50px;
+    text-align: center;
+    height: auto;
+}
+#F3{
+    margin-top: 75px;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+}
+#F1 h3{
+    text-align: left;
+}
+#vF1{
+    width: 49%;
+    height: 150px;
+    border: 1px solid black;
+    float: left;
+    border-radius: 5px;
+}
+#vF1 h3, #vF2 h3{
+    margin-left: 0px;
+    text-align: center;
+}
+#vF2 button,#vF1 button{
+    padding: 10px;
+    width: 150px;
+    cursor: pointer;
+}
+#vF2{
+    width: 49%;
+    height: 150px;
+    border: 1px solid white;
+    float: right;
+    border-radius: 5px;
+}
+#sf1{
+    padding: 10px;
+    width: 750px;
+    margin: 0 auto;
+    margin-top: 25px;
+    border-radius: 5px;
+    min-height: 25px;
+    border: 2px solid black;
+    margin-bottom: 15px;
+}
+#sf1 p span{
+    margin-left: 25px;
+}
+#titulo01{
+    height: 5px;
+    background-color: #FF8000;
+    width: 0;
+    animation-duration: 1s;
+    animation-name: ejemplo01;
+    width: 14.30%;
+}
+@keyframes ejemplo01{
+    0% {width: 0}
+    100%{width: 14.30%}
+}
+#titulo02{
+    height: 5px;
+    background-color: #FF8000;
+    width: 14.30%;
+    animation-duration: 1s;
+    animation-name: ejemplo02;
+    width: 28.6%;
+}
+@keyframes ejemplo02{
+    0% {width: 14.30%}
+    100%{width: 28.60%}
+}
+#titulo03{
+    height: 5px;
+    background-color: #FF8000;
+    width: 28.6%;
+    animation-duration: 1s;
+    animation-name: ejemplo03;
+    width: 42.90%;
+}
+@keyframes ejemplo03{
+    0% {width: 28.6%}
+    100%{width: 42.9%}
+}
+#titulo04{
+    height: 5px;
+    background-color: #FF8000;
+    width: 42.90%;
+    animation-duration: 1s;
+    animation-name: ejemplo04;
+    width: 57.2%;
+}
+@keyframes ejemplo04{
+    0% {width: 42.90%}
+    100%{width: 57.2%}
+}
+#titulo05{
+    height: 5px;
+    background-color: #FF8000;
+    width: 57.2%;
+    animation-duration: 1s;
+    animation-name: ejemplo05;
+    width: 71.5%;
+}
+@keyframes ejemplo05{
+    0% {width: 57.2%}
+    100%{width: 71.5%}
+}
+#titulo06{
+    height: 5px;
+    background-color: #FF8000;
+    width: 71.5%;
+    animation-duration: 1s;
+    animation-name: ejemplo06;
+    width: 85.8%;
+}
+@keyframes ejemplo06{
+    0% {width: 71.5%}
+    100%{width: 85.8%}
+}
+#titulo07{
+    height: 5px;
+    background-color: #FF8000;
+    width: 85.8%;
+    animation-duration: 1s;
+    animation-name: ejemplo07;
+    width: 100%;
+}
+@keyframes ejemplo07{
+    0% {width: 85.8%}
+    100%{width: 100%}
+}
+#imagenTorre{
+    position: absolute;
+    width: 100px;
+    top: 400px;
+    left: 1250px;
+}
